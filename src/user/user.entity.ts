@@ -34,7 +34,7 @@ export class User {
   @Column({ default: false })
   isVerified: boolean;
 
-  @Column({ nullable: true })
+  @Column({ type: 'varchar', length: 255, nullable: true })
   resetToken?: string | null;
 
   @Column({ nullable: true, type: 'timestamp' })
